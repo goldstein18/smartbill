@@ -1,0 +1,37 @@
+
+export const invoicesTranslations = {
+  en: {
+    title: "Invoices",
+    createInvoice: "Create Invoice",
+    invoiceNumber: "Invoice Number",
+    client: "Client",
+    dueDate: "Due Date",
+    totalAmount: "Total Amount",
+    status: "Status",
+    actions: "Actions",
+    viewInvoice: "View Invoice",
+    editInvoice: "Edit Invoice",
+    deleteInvoice: "Delete Invoice",
+    areYouSureDelete: "Are you sure you want to delete this invoice?",
+    invoiceCreatedSuccessfully: "Invoice created successfully!",
+    invoiceUpdatedSuccessfully: "Invoice updated successfully!",
+    invoiceDeletedSuccessfully: "Invoice deleted successfully!",
+  },
+  es: {
+    title: "Facturas",
+    createInvoice: "Crear Factura",
+    invoiceNumber: "Número de Factura",
+    client: "Cliente",
+    dueDate: "Fecha de Vencimiento",
+    totalAmount: "Cantidad Total",
+    status: "Estado",
+    actions: "Acciones",
+    viewInvoice: "Ver Factura",
+    editInvoice: "Editar Factura",
+    deleteInvoice: "Eliminar Factura",
+    areYouSureDelete: "¿Estás seguro de que quieres eliminar esta factura?",
+    invoiceCreatedSuccessfully: "¡Factura creada con éxito!",
+    invoiceUpdatedSuccessfully: "¡Factura actualizada con éxito!",
+    invoiceDeletedSuccessfully: "¡Factura eliminada con éxito!",
+  }
+};

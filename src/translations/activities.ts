@@ -1,0 +1,35 @@
+
+export const activitiesTranslations = {
+  en: {
+    title: "Recent Activities",
+    noActivities: "No activities yet.",
+    noActivitiesFound: "No activities found for the selected filters.",
+    windowTitle: "Window Title",
+    mergedEntryNote: "This entry represents {count} merged time entries",
+    filters: "Filters",
+    filterByClient: "Filter by client",
+    filterByApplication: "Filter by application", 
+    allClients: "All clients",
+    allApplications: "All applications",
+    pickDate: "Pick a date",
+    clearDate: "Clear date",
+    exportToPdf: "Export to PDF",
+    addEntry: "Add Entry",
+  },
+  es: {
+    title: "Actividades recientes",
+    noActivities: "Aún no hay actividades.",
+    noActivitiesFound: "No se encontraron actividades para los filtros seleccionados.",
+    windowTitle: "Título de Ventana",
+    mergedEntryNote: "Esta entrada representa {count} entradas de tiempo combinadas",
+    filters: "Filtros",
+    filterByClient: "Filtrar por cliente",
+    filterByApplication: "Filtrar por aplicación",
+    allClients: "Todos los clientes",
+    allApplications: "Todas las aplicaciones", 
+    pickDate: "Seleccionar fecha",
+    clearDate: "Limpiar fecha",
+    exportToPdf: "Exportar a PDF",
+    addEntry: "Agregar Entrada",
+  }
+};
