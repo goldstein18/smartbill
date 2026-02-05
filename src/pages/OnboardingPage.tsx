@@ -9,7 +9,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { OnboardingWelcome } from "@/components/onboarding/OnboardingWelcome";
 import { OnboardingAddClient } from "@/components/onboarding/OnboardingAddClient";
-import { OnboardingDesktopApp } from "@/components/onboarding/OnboardingDesktopApp";
 import { OnboardingInvoicePreview } from "@/components/onboarding/OnboardingInvoicePreview";
 
 const OnboardingPage = () => {
@@ -18,7 +17,7 @@ const OnboardingPage = () => {
   const { user } = useSupabaseAuth();
   const navigate = useNavigate();
 
-  const totalSteps = 4;
+  const totalSteps = 3;
   const progress = (currentStep / totalSteps) * 100;
 
   const handleNext = () => {
@@ -70,8 +69,6 @@ const OnboardingPage = () => {
       case 2:
         return <OnboardingAddClient onSkip={handleNext} onAdded={handleNext} />;
       case 3:
-        return <OnboardingDesktopApp onActivityDetected={handleComplete} />;
-      case 4:
         return <OnboardingInvoicePreview onComplete={handleComplete} isCompleting={isCompleting} />;
       default:
         return <OnboardingWelcome />;

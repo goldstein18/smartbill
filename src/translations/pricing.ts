@@ -12,7 +12,6 @@ export const pricingTranslations = {
           "Analytics dashboard",
           "Invoice generation",
           "Secure activity logs",
-          "Desktop app integration",
           "Email support"
         ]
       },
@@ -103,7 +102,6 @@ export const pricingTranslations = {
           "Panel de análisis",
           "Generación de facturas",
           "Registros de actividad seguros",
-          "Integración con aplicación de escritorio",
           "Soporte por correo electrónico"
         ]
       },

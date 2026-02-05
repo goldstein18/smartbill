@@ -109,8 +109,7 @@ export const useSubscription = () => {
     'time_tracking',
     'analytics',
     'invoicing',
-    'secure_logs',
-    'desktop_app'
+    'secure_logs'
   ];
 
   useEffect(() => {

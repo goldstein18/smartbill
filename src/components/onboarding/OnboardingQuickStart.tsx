@@ -90,9 +90,9 @@ export const OnboardingQuickStart = () => {
             <div>
               <h4 className="font-semibold text-green-900 mb-2">Pro Tip</h4>
               <p className="text-green-800 text-sm">
-                Start with the desktop app running in the background for automatic tracking, 
-                then use manual entries to fill in any gaps. This ensures you capture all 
-                your billable hours without any extra effort.
+                Create time entries as you work to ensure you capture all your billable hours. 
+                You can edit and organize entries later, so don't worry about perfection - just 
+                start tracking!
               </p>
             </div>
           </div>

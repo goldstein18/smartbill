@@ -30,7 +30,6 @@ export const PRICING_TIERS: PricingTier[] = [
       'Full time tracking',
       'Basic analytics',
       'Invoice generation',
-      'Desktop app integration',
       '14-day free trial'
     ],
     trial: true,

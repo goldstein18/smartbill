@@ -48,7 +48,7 @@ const TermsPage: React.FC = () => {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
               <p className="text-gray-600 leading-relaxed">
-                SmartBill is a time tracking and billing platform designed specifically for legal professionals. The Service allows users to track billable hours, manage clients, generate invoices, and analyze their practice's performance through our web application and desktop integration.
+                SmartBill is a time tracking and billing platform designed specifically for legal professionals. The Service allows users to track billable hours, manage clients, generate invoices, and analyze their practice's performance through our web application.
               </p>
             </section>
 

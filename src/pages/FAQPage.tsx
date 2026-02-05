@@ -21,7 +21,7 @@ const FAQPage: React.FC = () => {
       questions: [
         {
           question: "How do I create my first time entry?",
-          answer: "You can create time entries manually by clicking the 'Add Entry' button on your dashboard, or automatically using our desktop app integration. Manual entries require you to specify the start time, duration, and associate it with a client."
+          answer: "You can create time entries manually by clicking the 'Add Entry' button on your dashboard. Manual entries require you to specify the start time, duration, and associate it with a client."
         },
         {
           question: "How do I set up my first client?",
@@ -41,8 +41,8 @@ const FAQPage: React.FC = () => {
           answer: "Yes! Click on any time entry in your activities list to edit the duration, client assignment, or description. Changes are saved automatically."
         },
         {
-          question: "How does the desktop app integration work?",
-          answer: "Our desktop app automatically tracks your computer activity and creates time entries based on your work patterns. You can then review and assign these entries to specific clients."
+          question: "How do I track time automatically?",
+          answer: "You can create time entries manually by clicking the 'Add Entry' button on your dashboard. Simply specify the start time, duration, and associate it with a client for accurate billing."
         },
         {
           question: "Can I delete time entries?",
@@ -89,15 +89,15 @@ const FAQPage: React.FC = () => {
       questions: [
         {
           question: "Why aren't my time entries showing up?",
-          answer: "Check that you're looking at the correct date range and that the entries are properly saved. If using the desktop app, ensure it's running and properly connected to your account."
+          answer: "Check that you're looking at the correct date range and that the entries are properly saved. Make sure you've clicked 'Save' after creating an entry."
         },
         {
           question: "The app seems slow or unresponsive",
           answer: "Try refreshing your browser and ensure you have a stable internet connection. If problems persist, contact our support team at support@smartbill.com."
         },
         {
-          question: "I'm having trouble with the desktop app",
-          answer: "Make sure the desktop app is properly installed and running. Check the Desktop Tracker Status on your Profile page for connection information. Restart the app if needed."
+          question: "How do I edit multiple time entries at once?",
+          answer: "You can select multiple entries on the Activities page and use bulk actions to edit or delete them. This makes it easy to manage your time tracking data efficiently."
         }
       ]
     }

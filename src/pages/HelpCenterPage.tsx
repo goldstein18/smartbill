@@ -128,7 +128,7 @@ const HelpCenterPage: React.FC = () => {
             </div>
             <div className="border-l-4 border-brand-500 pl-4">
               <h3 className="font-semibold text-gray-900">3. Start Tracking Time</h3>
-              <p className="text-gray-600 text-sm">Use manual entry or download our desktop app for automatic tracking.</p>
+              <p className="text-gray-600 text-sm">Use manual entry to track your time and billable hours.</p>
             </div>
             <div className="border-l-4 border-brand-500 pl-4">
               <h3 className="font-semibold text-gray-900">4. Generate Invoices</h3>

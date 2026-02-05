@@ -1,6 +1,5 @@
 
 import UserProfileForm from "@/components/auth/UserProfileForm";
-import { DesktopTrackerStatus } from "@/components/desktop-tracker/DesktopTrackerStatus";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
@@ -18,9 +17,8 @@ const ProfilePage = () => {
         {t('profile.subtitle')}
       </p>
       
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-1">
         <UserProfileForm />
-        <DesktopTrackerStatus />
       </div>
 
       <Card>

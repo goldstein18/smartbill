@@ -78,7 +78,6 @@ Configure these in your hosting platform (Vercel, Railway, or Lovable):
 
 - `VITE_SUPABASE_URL` - Your Supabase project URL
 - `VITE_SUPABASE_ANON_KEY` - Your Supabase anonymous/public key
-- `VITE_DESKTOP_TRACKER_DOWNLOAD_URL` - (Optional) URL for desktop tracker installer
 
 **How to configure:**
 
@@ -112,6 +111,17 @@ Configure these in Supabase Dashboard:
 - Never expose `SUPABASE_SERVICE_ROLE_KEY` in frontend code
 - The service role key bypasses Row Level Security (RLS)
 - Use Edge Functions for operations requiring service role access
+
+### Row Level Security (RLS)
+
+This project implements Row Level Security (RLS) on all user data tables to ensure data privacy and security:
+
+- **Tables with RLS**: `clients`, `invoices`, `credit_notes`, `invoice_timelines`, `providers`
+- **Policy Pattern**: Users can only access data where `auth.uid() = user_id`
+- **Documentation**: See [docs/DATABASE_RLS_POLICIES.md](docs/DATABASE_RLS_POLICIES.md) for detailed policy information
+- **Testing**: See [docs/RLS_TESTING.md](docs/RLS_TESTING.md) for RLS testing guidelines
+
+All database queries automatically filter by user ownership, ensuring users can only access their own data.
 
 ## How can I deploy this project?
 

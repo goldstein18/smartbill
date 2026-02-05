@@ -56,8 +56,8 @@ export const OnboardingFeatures = () => {
     },
     {
       icon: Download,
-      title: "Desktop Integration",
-      description: "Seamless desktop app for automatic tracking"
+      title: "Export & Reports",
+      description: "Export your data and generate detailed reports"
     }
   ];
 
