@@ -1,19 +1,27 @@
-
 // Desktop client configuration for time tracking applications
-// This uses the service role key which bypasses RLS for desktop trackers
+// IMPORTANT SECURITY NOTE: 
+// The service role key bypasses RLS and should NEVER be exposed in frontend code.
+// This client now uses the anon key. If you need service role functionality,
+// create a Supabase Edge Function that uses the service role key server-side.
 
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = "https://eussxomitqyumgsuuflq.supabase.co";
-// Service role key - this should be used ONLY by desktop applications
-// Never expose this key in frontend applications or public repositories
-const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV1c3N4b21pdHF5dW1nc3V1ZmxxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0ODQ2MDIzNiwiZXhwIjoyMDY0MDM2MjM2fQ.P8nHMWR2qv_PNs_gCdLyLFfJmYBkO-jvlGwZnYu9LfI";
+// Get Supabase credentials from environment variables
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-// Create Supabase client for desktop applications with service role
+if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  throw new Error(
+    'Missing Supabase environment variables. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env file'
+  );
+}
+
+// Create Supabase client for desktop applications
+// Using anon key - ensure RLS policies are properly configured in Supabase
 export const desktopSupabase = createClient<Database>(
   SUPABASE_URL, 
-  SUPABASE_SERVICE_ROLE_KEY,
+  SUPABASE_ANON_KEY,
   {
     auth: {
       persistSession: false, // Desktop apps handle their own session management

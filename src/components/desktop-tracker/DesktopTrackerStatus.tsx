@@ -15,7 +15,10 @@ export const DesktopTrackerStatus: React.FC = () => {
   };
 
   const handleDownload = () => {
-    const downloadUrl = "https://eussxomitqyumgsuuflq.supabase.co/storage/v1/object/sign/smartbill-installer/smartbill-tracker%20Setup%201.0.0.exe?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jMmI2NTA3Ny0wYzc0LTQ2NGQtOWFlZi0yYTZjYWU1YzI5ZTQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzbWFydGJpbGwtaW5zdGFsbGVyL3NtYXJ0YmlsbC10cmFja2VyIFNldHVwIDEuMC4wLmV4ZSIsImlhdCI6MTc1MDI3MTU5OSwiZXhwIjoxNzUwODc2Mzk5fQ.txokrQn7lvnifxhaAOwjMtMsHyYgSPeYahNBxKrvfZQ";
+    // TODO: Generate signed URL dynamically via Edge Function or use a public bucket
+    // For now, using environment variable if available, otherwise fallback
+    const downloadUrl = import.meta.env.VITE_DESKTOP_TRACKER_DOWNLOAD_URL || 
+      "https://eussxomitqyumgsuuflq.supabase.co/storage/v1/object/public/smartbill-installer/smartbill-tracker%20Setup%201.0.0.exe";
     window.open(downloadUrl, '_blank');
     toast.success("Download started!");
   };
