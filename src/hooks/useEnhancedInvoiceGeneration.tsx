@@ -71,7 +71,6 @@ export const useEnhancedInvoiceGeneration = () => {
       return invoiceId;
 
     } catch (error) {
-      console.error('Error generating invoice:', error);
       toast.error("Failed to generate invoice");
       return null;
     } finally {

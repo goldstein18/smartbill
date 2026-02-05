@@ -75,7 +75,6 @@ export const useInvoiceGeneration = () => {
       
       toast.success("Invoice generated successfully!");
     } catch (error) {
-      console.error('Error generating invoice:', error);
       toast.error("Failed to generate invoice");
     } finally {
       setIsGenerating(false);

@@ -90,7 +90,6 @@ export const EnhancedInvoiceGenerationDialog: React.FC<EnhancedInvoiceGeneration
         toast.success("Invoice created, saved, and PDF downloaded successfully!");
       }
     } catch (error) {
-      console.error('Error in invoice generation process:', error);
       toast.error("Failed to complete invoice generation");
     }
   };

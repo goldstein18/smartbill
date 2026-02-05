@@ -491,9 +491,8 @@ const ClientsPage: React.FC = () => {
         onOpenChange={setIsInvoiceDialogOpen}
         clients={clients}
         timeEntries={timeEntries}
-        onInvoiceCreated={(invoiceId) => {
+        onInvoiceCreated={() => {
           toast.success("Invoice created and saved successfully!");
-          console.log("Created invoice with ID:", invoiceId);
         }}
       />
     </div>

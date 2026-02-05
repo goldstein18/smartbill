@@ -166,7 +166,6 @@ export const EmailCompositionDialog: React.FC<EmailCompositionDialogProps> = ({
       setEmailBody('');
       setSelectedTemplate('professional');
     } catch (error) {
-      console.error('Error sending email:', error);
     }
   };
 

@@ -48,10 +48,6 @@ export const InvoiceHistoryPage: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [isEmailLoading, setIsEmailLoading] = useState(false);
 
-  useEffect(() => {
-    console.log("InvoiceHistoryPage: invoices updated", invoices);
-  }, [invoices]);
-
   const filteredInvoices = invoices.filter(invoice => {
     const matchesSearch = 
       invoice.invoice_number.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -96,9 +92,11 @@ export const InvoiceHistoryPage: React.FC = () => {
       statusData.sent_at = new Date().toISOString();
     }
 
-    const success = await updateInvoiceStatus(invoiceId, newStatus as any, statusData);
-    if (success) {
+    try {
+      await updateInvoiceStatus(invoiceId, newStatus as any, statusData);
       toast.success(`Invoice status updated to ${newStatus}`);
+    } catch (error) {
+      // Error handling is done in the mutation
     }
   };
 
@@ -117,7 +115,6 @@ export const InvoiceHistoryPage: React.FC = () => {
       });
 
       if (error) {
-        console.error('Error sending email:', error);
         toast.error("Failed to send email");
         return;
       }
@@ -130,7 +127,6 @@ export const InvoiceHistoryPage: React.FC = () => {
 
       toast.success("Invoice email sent successfully!");
     } catch (error) {
-      console.error('Error sending email:', error);
       toast.error("Failed to send email");
     } finally {
       setIsEmailLoading(false);
@@ -140,7 +136,11 @@ export const InvoiceHistoryPage: React.FC = () => {
 
   const handleDeleteInvoice = async (invoice: InvoiceWithDetails) => {
     if (window.confirm(`Are you sure you want to delete invoice ${invoice.invoice_number}?`)) {
-      await deleteInvoice(invoice.id);
+      try {
+        await deleteInvoice(invoice.id);
+      } catch (error) {
+        // Error handling is done in the mutation
+      }
     }
   };
 
